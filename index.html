@@ -18,16 +18,22 @@
   </head>
   <body>
     <header class="site-header" id="top">
-      <div class="top-bar">
-        <div class="container top-bar__inner">
-          <span>Serving Avalon, Stone Harbor, and Cape May</span>
-          <a href="tel:6094082172">609.408.2172</a>
+      <div class="brand-bar">
+        <div class="container brand-bar__inner">
+          <a class="logo" href="#top" aria-label="Vesper Painting home">
+            <img class="logo__image" src="assets/vesper-logo.png" alt="Vesper Painting" />
+          </a>
+          <div class="brand-bar__copy">
+            <p class="brand-bar__title">Vesper Painting</p>
+            <p class="brand-bar__subtitle">
+              Luxury Residential &amp; Commercial Painters
+              <span>Serving Avalon, Stone Harbor, and Cape May</span>
+            </p>
+          </div>
+          <a class="brand-bar__phone" href="tel:6094082172">609.408.2172</a>
         </div>
       </div>
       <div class="container nav-wrap">
-        <a class="logo" href="#top" aria-label="Vesper Painting home">
-          <img class="logo__image" src="assets/vesper-logo.png" alt="Vesper Painting" />
-        </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
           Menu
         </button>
@@ -45,48 +51,47 @@
 
     <main>
       <section class="hero" id="quote">
-        <img class="hero__bg" src="https://picsum.photos/id/1068/1900/1100" alt="Freshly painted home exterior" />
-        <div class="hero__overlay"></div>
-        <div class="container hero__inner">
-          <div class="hero__content">
-            <div class="rating-pill">
-              <span class="g-dot" aria-hidden="true"></span>
-              <span>Google 4.9</span>
-              <span class="stars" aria-label="5 stars">*****</span>
-            </div>
-            <h1>The Cape May County Painters You Can Trust</h1>
-            <p>White-Glove Interior, Exterior, and Cabinet Painting for Shore Homeowners</p>
-          </div>
+        <div class="container hero__stage">
+          <div class="hero__carousel" id="hero-carousel">
+            <article class="hero-slide is-active">
+              <img
+                src="https://picsum.photos/id/1018/1800/1100"
+                alt="Freshly painted coastal residence exterior"
+              />
+            </article>
+            <article class="hero-slide">
+              <img
+                src="https://picsum.photos/id/1040/1800/1100"
+                alt="Luxury painted interior with refined trim work"
+              />
+            </article>
+            <article class="hero-slide">
+              <img
+                src="https://picsum.photos/id/1068/1800/1100"
+                alt="Cabinet refinishing and interior painting project"
+              />
+            </article>
 
-          <form class="quote-form" action="#" method="post">
-            <h2>Request Your Free Quote</h2>
-            <p>Tell us about your home and we will follow up with next steps and scheduling options.</p>
-            <div class="two-col">
-              <label>
-                First name*
-                <input type="text" name="firstName" required />
-              </label>
-              <label>
-                Last name*
-                <input type="text" name="lastName" required />
-              </label>
+            <div class="hero__overlay"></div>
+
+            <div class="hero-rating-card" aria-label="Google 5-star rating">
+              <div class="hero-rating-card__icon">G</div>
+              <div>
+                <div class="hero-rating-card__score">5.0 <span aria-hidden="true">★★★★★</span></div>
+                <div class="hero-rating-card__label">Google Reviews</div>
+              </div>
             </div>
-            <div class="two-col">
-              <label>
-                Email*
-                <input type="email" name="email" required />
-              </label>
-              <label>
-                Phone*
-                <input type="tel" name="phone" required />
-              </label>
+
+            <div class="hero__controls" aria-label="Hero gallery controls">
+              <button class="hero__arrow" id="hero-prev" type="button" aria-label="Previous hero image">&lt;</button>
+              <div class="hero__dots" id="hero-dots"></div>
+              <button class="hero__arrow" id="hero-next" type="button" aria-label="Next hero image">&gt;</button>
             </div>
-            <label>
-              Tell us about your project
-              <textarea name="message" rows="4"></textarea>
-            </label>
-            <button class="button button--orange" type="submit">Get My Quote</button>
-          </form>
+          </div>
+          <div class="hero-intro">
+            <h1>Luxury Residential &amp; Commercial Painters</h1>
+            <p>White-glove interior, exterior, and cabinet painting for shore homeowners who expect a cleaner process and a sharper finish.</p>
+          </div>
         </div>
       </section>
 
@@ -113,34 +118,13 @@
 
       <section class="section" id="reviews">
         <div class="container">
-          <h2 class="lined-title">What Your Neighbors Are Saying</h2>
-          <div class="slider-wrap">
-            <button class="nav-btn" id="prev-testimonial" type="button" aria-label="Previous testimonial">&lt;</button>
-            <div class="testimonial-track" id="testimonial-track">
-              <article class="testimonial-card">
-                <p>"Vesper Painting made everything easy. The crew was punctual, respectful, and detail-oriented from prep to cleanup."</p>
-                <h3>Sarah L.</h3>
-                <small>Google Review</small>
-              </article>
-              <article class="testimonial-card">
-                <p>"Excellent communication and flawless results. The exterior looks brand new and the process felt stress-free."</p>
-                <h3>Michael R.</h3>
-                <small>Google Review</small>
-              </article>
-              <article class="testimonial-card">
-                <p>"They finished on time, stayed organized, and kept our home clean. We will absolutely hire them again."</p>
-                <h3>Jennifer K.</h3>
-                <small>Google Review</small>
-              </article>
-              <article class="testimonial-card">
-                <p>"A highly professional painting company. Every commitment they made was delivered exactly as promised."</p>
-                <h3>David M.</h3>
-                <small>Google Review</small>
-              </article>
+          <h2 class="lined-title reviews-title">What Your Neighbors Are Saying</h2>
+          <div class="reviews-widget-shell">
+            <div id="reviews-widget" class="reviews-widget" aria-live="polite">
+              <div id="JFWebsiteWidget-019d83937361720087dd01f8c35841e99b84"></div>
+              <script src="https://www.jotform.com/website-widgets/embed/019d83937361720087dd01f8c35841e99b84"></script>
             </div>
-            <button class="nav-btn" id="next-testimonial" type="button" aria-label="Next testimonial">&gt;</button>
           </div>
-          <div class="dots" id="testimonial-dots"></div>
         </div>
       </section>
 
@@ -293,9 +277,7 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <section>
-          <div class="footer-logo-wrap">
-            <img class="footer-logo" src="assets/vesper-logo.png" alt="Vesper Painting" />
-          </div>
+          <img class="footer-logo" src="assets/vesper-logo-footer.png" alt="Vesper Painting" />
           <p>Serving Avalon, Stone Harbor, Cape May, Ocean City, and Sea Isle City</p>
           <p><a href="mailto:hello@vesperpainting.com">hello@vesperpainting.com</a></p>
           <p><a href="tel:6094082172">609.408.2172</a></p>
